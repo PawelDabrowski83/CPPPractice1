@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Practice1", "Practice1\Prac
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ex2-input", "example2\example2.vcxproj", "{B22719D3-EC5B-4E1C-A2A3-8F74DB8EC297}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ex3-20questions", "ex3-20questions\ex3-20questions.vcxproj", "{5632F11F-47A4-49E7-AD06-156CFD5C49BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{B22719D3-EC5B-4E1C-A2A3-8F74DB8EC297}.Release|x64.Build.0 = Release|x64
 		{B22719D3-EC5B-4E1C-A2A3-8F74DB8EC297}.Release|x86.ActiveCfg = Release|Win32
 		{B22719D3-EC5B-4E1C-A2A3-8F74DB8EC297}.Release|x86.Build.0 = Release|Win32
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Debug|x64.ActiveCfg = Debug|x64
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Debug|x64.Build.0 = Debug|x64
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Debug|x86.ActiveCfg = Debug|Win32
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Debug|x86.Build.0 = Debug|Win32
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Release|x64.ActiveCfg = Release|x64
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Release|x64.Build.0 = Release|x64
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Release|x86.ActiveCfg = Release|Win32
+		{5632F11F-47A4-49E7-AD06-156CFD5C49BA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
