@@ -1,11 +1,59 @@
 ﻿#include <iostream>
 
+struct Node {
+	char letter;
+	Node* next;
+};
+
+void addLetter(struct Node*& head, char c)
+{
+
+}
+
+void printLetters(const struct Node* head)
+{
+}
+
+bool checkLetter(const struct Node* head, char c)
+{
+	return false;
+}
+
+void removeLetter(struct Node*& head, char c)
+{
+}
+
+void clear(struct Node*& head)
+{
+}
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	struct Node* head = nullptr;
+	std::string s{ "Ala ma kota" };
+	for (size_t i = 0; i < s.size(); ++i)
+	{
+		addLetter(head, s[i]);
+	}
+
+	printLetters(head);
+	std::cout << checkLetter(head, 'a') << "\n";
+	std::cout << checkLetter(head, 'i') << "\n";
+	removeLetter(head, 'a');
+
+	std::cout << checkLetter(head, 'a') << "\n";
+
+	removeLetter(head, 'A');
+
+	std::cout << checkLetter(head, 'A') << "\n";
+
+	printLetters(head);
+
+	clear(head);
 }
 
 /*
+
 Zadanie 2 [0,5 pkt]
 
 Struktura Node o następującej postaci:
@@ -96,4 +144,5 @@ Ala ma kota
 0
 l m kot
 
-*/
+ */
+
