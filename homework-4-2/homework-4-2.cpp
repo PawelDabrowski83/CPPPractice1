@@ -7,11 +7,22 @@ struct Node {
 
 void addLetter(struct Node*& head, char c)
 {
-
+	Node* temp = head;
+	while (temp->next) {
+		temp = temp->next;
+	}
+	temp->next = new Node{ c, nullptr };
 }
 
-void printLetters(const struct Node* head)
+void printLetter(Node* head) {
+	std::cout << head->letter;
+}
+
+void printLetters(const Node* head)
 {
+	while (head != nullptr) {
+		std::cout << head->letter;
+	}
 }
 
 bool checkLetter(const struct Node* head, char c)
