@@ -14,28 +14,45 @@ void addLetter(struct Node*& head, char c)
 	temp->next = new Node{ c, nullptr };
 }
 
-void printLetter(Node* head) {
-	std::cout << head->letter;
-}
-
-void printLetters(const Node* head)
+void printLetters(const struct Node* head)
 {
 	while (head != nullptr) {
 		std::cout << head->letter;
+		head = head->next;
 	}
+	std::cout << std::endl;
 }
 
 bool checkLetter(const struct Node* head, char c)
 {
+	while (head != nullptr) {
+		if (head->letter == c) {
+			return true;
+		}
+		head = head->next;
+	}
 	return false;
 }
 
 void removeLetter(struct Node*& head, char c)
 {
+	Node* temp = head;
+	while (temp->next) {
+		if (temp->next->letter == c) {
+			Node* toDelete = temp->next;
+			temp->next = temp->next->next;
+			delete toDelete;
+		}
+		temp = temp->next;
+	}
 }
 
 void clear(struct Node*& head)
 {
+	Node* temp = head;
+	while (temp->next) {
+		// nie wiem jak pójść wgłąb listy i czyścić ją od ostatniej pozycji
+	}
 }
 
 int main()
