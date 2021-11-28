@@ -10,6 +10,7 @@ public:
     Point();
     Point(double x);
     Point(double x, double y);
+    Point(const Point& other);
     ~Point(); // destruktor
 
     void show() const; // const oznacza, że metoda nie modyfikuje obiektu klasy
@@ -49,5 +50,11 @@ Point::~Point()
 void Point::show() const
 {
     std::cout << "Point [" << x << ", " << y << "]\n";
+}
+
+// konstruktor kopiujący
+Point::Point(const Point& other) : Point(other.x, other.y)
+{
+
 }
 
