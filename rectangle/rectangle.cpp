@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cmath>
 
 class Rectangle
 {
@@ -33,4 +34,16 @@ Rectangle::Rectangle(double side) : Rectangle(side, side)
 Rectangle::Rectangle(double width, double height) {
     this->width = width;
     this->height = height;
+}
+
+double Rectangle::getWidth() {
+    return this->width;
+}
+
+double Rectangle::getHeight() {
+    return this->height;
+}
+
+double Rectangle::getDiagonal() {
+    return 
 }

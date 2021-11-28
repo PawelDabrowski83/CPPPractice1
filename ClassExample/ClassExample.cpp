@@ -43,11 +43,11 @@ Point::Point(double x, double y) : x(x), y(y) // lista inicjalizacyjna
 // destruktor wołany automatycznie w momemncie usuwania obiektu
 Point::~Point()
 {
-
+    std::cout << "Usuwanie obiektu klasy Point.\n";
 }
 
 void Point::show() const
 {
-//    std::cout << 
+    std::cout << "Point [" << x << ", " << y << "]\n";
 }
 
