@@ -32,6 +32,9 @@ int main()
 
     p.count = 6;
 
+    Point* ptr = new Point{ 5, 5 }; // alokacja obiektu ze stosu
+    delete ptr;
+
     // metoda statyczna
     Point::test();
     p.test();
