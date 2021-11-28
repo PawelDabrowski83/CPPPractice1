@@ -5,7 +5,10 @@ class Point
 private:
     double x;
     double y;
+    
 public:
+    static int count;
+    static void test();
     // konstruktor bezparametrowy
     Point();
     Point(double x);
@@ -18,10 +21,24 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
     Point p{ 0 };
     p.show();
+
+    Point p1 = p;
+    p1 = p;
+    p1.show();
+
+    p1.count = 2;
+
+    p.count = 6;
+
+    // metoda statyczna
+    Point::test();
+    p.test();
 }
+
+// inicjalizacja pola statycznego poza ciałem klasy
+int Point::count = 0;
 
 // :: oznacza należy do klasy
 Point::Point() : Point(0) // wywołanie innego konstruktora
