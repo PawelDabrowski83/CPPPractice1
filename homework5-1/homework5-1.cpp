@@ -38,6 +38,7 @@ int main()
 	p1.transX(5).transY(3).show();
 
 	std::cout << "Distance [p0, p1] = " << Point::distance(p0, p1) << "\n";
+	// Test is passed.
 }
 
 Point::Point() : Point(0)
