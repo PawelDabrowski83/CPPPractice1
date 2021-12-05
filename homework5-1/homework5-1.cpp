@@ -10,8 +10,10 @@ public:
 	Point();
 	Point(double);
 	Point(double, double);
-	getX();
-	getY();
+	double getX() const;
+	double getY() const;
+	void setX();
+	void setY();
 };
 
 int main()
@@ -41,6 +43,15 @@ Point::Point(double x) : Point(x, x)
 
 Point::Point(double x, double y) : x(x), y(y)
 {}
+
+double Point::getX() const {
+	return this->x;
+}
+
+double Point::getY() const {
+	return this->y;
+}
+
 
 
 
