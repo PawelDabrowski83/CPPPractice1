@@ -15,6 +15,9 @@ public:
 	void setX(double);
 	void setY(double);
 	void show() const;
+	Point& transX(double);
+	Point& transY(double);
+	Point& transXY(double, double);
 };
 
 int main()
@@ -63,6 +66,21 @@ void Point::setY(double y) {
 
 void Point::show() const {
 	std::cout << "Point [" << getX() << "; " << getY() << "]" << std::endl;
+}
+
+Point& Point::transX(double shiftX) {
+	this->x += shiftX;
+	return *this;
+}
+
+Point& Point::transY(double shiftY) {
+	this->y += shiftY;
+	return *this;
+}
+
+Point& Point::transXY(double shiftX, double shiftY) {
+	this->transX(shiftX).transY(shiftY);
+	return *this;
 }
 
 
