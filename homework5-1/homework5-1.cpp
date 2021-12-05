@@ -4,8 +4,14 @@
 class Point
 {
 private:
-
+	double x;
+	double y;
 public:
+	Point();
+	Point(double);
+	Point(double, double);
+	getX();
+	getY();
 };
 
 int main()
@@ -26,6 +32,19 @@ int main()
 
 	std::cout << "Distance [p0, p1] = " << Point::distance(p0, p1) << "\n";
 }
+
+Point::Point() : Point(0)
+{}
+
+Point::Point(double x) : Point(x, x)
+{}
+
+Point::Point(double x, double y) : x(x), y(y)
+{}
+
+
+
+
 
 /*
 * 
