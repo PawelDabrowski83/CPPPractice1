@@ -12,8 +12,9 @@ public:
 	Point(double, double);
 	double getX() const;
 	double getY() const;
-	void setX();
-	void setY();
+	void setX(double);
+	void setY(double);
+	void show() const;
 };
 
 int main()
@@ -52,7 +53,17 @@ double Point::getY() const {
 	return this->y;
 }
 
+void Point::setX(double x) {
+	this->x = x;
+}
 
+void Point::setY(double y) {
+	this->y = y;
+}
+
+void Point::show() const {
+	std::cout << "Point [" << getX() << "; " << getY() << "]" << std::endl;
+}
 
 
 
