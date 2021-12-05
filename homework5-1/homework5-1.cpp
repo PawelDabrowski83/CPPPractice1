@@ -18,7 +18,7 @@ public:
 	Point& transX(double);
 	Point& transY(double);
 	Point& transXY(double, double);
-	static double distance(const Point&, const Point&) const;
+	static double distance(const Point&, const Point&);
 };
 
 int main()
@@ -84,7 +84,7 @@ Point& Point::transXY(double shiftX, double shiftY) {
 	return *this;
 }
 
-double Point::distance(const Point &p0, const Point &p1) const {
+double Point::distance(const Point &p0, const Point &p1) {
 	return abs(p0.getX() - p1.getX()) + abs(p0.getY() - p1.getY());
 }
 
