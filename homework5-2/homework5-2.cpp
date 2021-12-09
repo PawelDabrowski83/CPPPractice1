@@ -1,12 +1,55 @@
 ﻿#include <iostream>
 
+template<typename T>
+class Stack
+{
+private:
+  struct Node
+  {
+    T value;
+    Node* next;
+  };
+  Node* head;
+public:
+  Stack();
+  Stack(const Stack&);
+  ~Stack();
+  bool empty() const;
+  void put(const T&);
+  T get();
+};
+
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+    Stack<int> first_stack;
 
+    for (size_t i = 0; i < 5; ++i)
+    {
+        first_stack.put(i * i);
+    }
+
+    for (size_t i = 0; i < 5; ++i)
+    {
+        std::cout << "Removing element from first stack: " << first_stack.get() << "\n";
+    }
+    std::cout << "\n";
+
+    for (size_t i = 0; i < 5; ++i)
+    {
+        first_stack.put(i);
+    }
+
+    Stack<int> second_stack{ first_stack };
+
+    for (size_t i = 0; i < 5; ++i)
+    {
+        std::cout << "Removing element from second stack: " << second_stack.get() << "\n";
+    }
+    std::cout << "\n";
+
+}
 /*
-* 
+
 Utwórz szablon klasy Stack, reprezentujący stos dla elementów pewnego typu. Implementacja klasy powinna opierać się na strukturze listy 
 jednokierunkowej dla której pamiętany jest wskaźnik head, wskazujący na pierwszy element listy. Dla klasy Stack powinny zostać zdefiniowane 
 następujące metody:
