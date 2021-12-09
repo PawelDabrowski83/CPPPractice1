@@ -41,6 +41,7 @@ public:
 int main()
 {
   Stack<int> first_stack;
+
   for (size_t i = 0; i < 5; ++i)
   {
     first_stack.put(i * i);
@@ -50,7 +51,6 @@ int main()
   {
     std::cout <<"Removing element from first stack: "<< first_stack.get() <<"\n";
   }
-
   std::cout <<"\n";
 
   for (size_t i = 0; i < 5; ++i)
@@ -64,35 +64,32 @@ int main()
   {
     std::cout <<"Removing element from second stack: "<< second_stack.get() <<"\n";
   }
-
   std::cout <<"\n";
+
 }
 
-
 powinien posiadać efekt zbliżony do przedstawionego poniżej:
-
 Removing element from first stack: 16
 Removing element from first stack: 9
 Removing element from first stack: 4
 Removing element from first stack: 1
 Removing element from first stack: 0
 
-Removing element from second stack: 0
-Removing element from second stack: 1
-Removing element from second stack: 2
-Removing element from second stack: 3
+
 Removing element from second stack: 4
+Removing element from second stack: 3
+Removing element from second stack: 2
+Removing element from second stack: 1
+Removing element from second stack: 0
 
 Destructor starts.
 Destructor ends.
-
 Destructor starts.
-
 Removing 4
 Removing 3
 Removing 2
 Removing 1
 Removing 0
-
 Destructor ends.
+
 */
