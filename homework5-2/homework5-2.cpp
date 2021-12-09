@@ -48,6 +48,33 @@ int main()
     std::cout << "\n";
 
 }
+
+template<typename T>
+Stack<T>::Stack() : head(nullptr) {
+}
+
+template<typename T>
+Stack<T>::Stack(const Stack& other) : Stack(other.head){
+}
+
+template<typename T>
+Stack<T>::~Stack() {
+    std::cout << "Destructor starts." << std::endl;
+    std::cout << "Destructor ends." << std::endl;
+}
+
+template<typename T>
+bool Stack<T>::empty() const {
+    return head == nullptr;
+}
+
+template<typename T>
+void Stack<T>::put(const T& data) {
+    if (empty) {
+        head = new Node{ data, nullptr };
+
+    }
+}
 /*
 
 Utwórz szablon klasy Stack, reprezentujący stos dla elementów pewnego typu. Implementacja klasy powinna opierać się na strukturze listy 
