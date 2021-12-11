@@ -54,7 +54,7 @@ Stack<T>::Stack() : head(nullptr) {
 }
 
 template<typename T>
-Stack<T>::Stack(const Stack& other) : Stack(other.head){
+Stack<T>::Stack<T>(const Stack<T>& other) : Stack<T>(other.head){
 }
 
 template<typename T>
@@ -70,9 +70,20 @@ bool Stack<T>::empty() const {
 
 template<typename T>
 void Stack<T>::put(const T& data) {
-    if (empty) {
-        head = new Node{ data, nullptr };
-
+    // if stack is empty, add new element
+    if (empty()) {
+        this->head.value = data;
+        this->head.next = new Node{};
+    }
+    else {
+        //if stack is not empty, iterate head to find null
+        Node* temp = head->next;
+        while (temp != nullptr) {
+            temp = temp->next;
+        }
+        temp = new Node{};
+        temp.value = data;
+        temp.next = nullptr;
     }
 }
 /*
